@@ -1,5 +1,5 @@
-NAME    := pyelftools
+NAME    := python-pyelftools
 SRC_EXT := gz
-#DL_NAME := avocado
+SPEC    := pyelftools.spec
 
 include packaging/Makefile_packaging.mk
