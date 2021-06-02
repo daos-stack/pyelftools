@@ -4,7 +4,7 @@
 Summary:        Pure-Python library for parsing and analyzing ELF files
 Name:           pyelftools
 Version:        0.27
-Release:        2%{?dist}
+Release:        2.01%{?dist}
 License:        Public Domain
 URL:            https://github.com/eliben/pyelftools
 Source0:        https://github.com/eliben/pyelftools/archive/v%{version}/%{name}-%{version}.tar.gz
@@ -18,7 +18,7 @@ Summary:	%{summary}
 # https://github.com/eliben/pyelftools/issues/180
 Provides:	bundled(python3-construct) = 2.6
 BuildRequires:  %{_bindir}/readelf
-BuildRequires:  python3-devel
+BuildRequires:  python%{python3_pkgversion}-devel
 BuildRequires:  python3-setuptools
 BuildArch:      noarch
 %{?python_provide:%python_provide python3-%{name}}
@@ -59,6 +59,9 @@ popd
 %{python3_sitelib}/pyelftools-*.egg-info
 
 %changelog
+* Wed Jun 02 2021 Brian J. Murrell <brian.murrell@intel.org> - 0.27-2.01
+- Use python%{python3_pkgversion}-devel for EL7 portability
+
 * Wed Jan 27 2021 Fedora Release Engineering <releng@fedoraproject.org> - 0.27-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_34_Mass_Rebuild
 

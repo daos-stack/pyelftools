@@ -41,4 +41,4 @@
 //@Library(value="pipeline-lib@your_branch") _
 
 // only needed on EL8
-packageBuildingPipeline(['distros': ['centos8']])
+packageBuildingPipeline(['distros': ['centos7', 'centos8']])
